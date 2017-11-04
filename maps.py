@@ -1,5 +1,5 @@
 import networkx as nx
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 G = nx.MultiDiGraph()
 
@@ -457,11 +457,41 @@ building_number = {
     '행원파크': 707,
     '제1학생생활관': 801,
     '제5학생생활관': 803
-
 }
 
+
+
+
+
 def path_search(source, target):
-    return nx.dijkstra_path(G, source, target)
+    path = nx.dijkstra_path(G, source, target)
+    tips = set()
+    for id in path:
+        if id in {12, 21, 105}:
+            tips.add(1)
+        elif id in {12, 19, 20, 107}:
+            tips.add(2)
+        elif id in {60, 61, 62, 706, 707}:
+            tips.add(3)
+        elif id in {29, 32, 204}:
+            tips.add(4)
+            tips.add(6)
+            tips.add(10)
+        elif id in {48, 56, 401}:
+            tips.add(5)
+        elif id in {23, 24, 31, 33, 37, 38, 209}:
+            tips.add(7)
+        elif id in {15, 16, 17, 18, 508}:
+            tips.add(8)
+        elif id in {42, 56, 212}:
+            tips.add(9)
+
+    ret = {
+        "path": path,
+        "tips": list(tips)
+    }
+    return ret;
+
 
 if __name__=='__main__':
     pos = nx.spring_layout(G)
