@@ -17,6 +17,6 @@ for i in rdr:
     group_data.append(info)
     # print(i)
 print(json.dumps(group_data, ensure_ascii=False, indent="\t"))
-# with open('data_file.json', 'w', encoding='utf-8') as make_file:
-#     json.dump(group_data, make_file, ensure_ascii=False, indent="\t")
+with open('data_file.json', 'w', encoding='utf-8') as make_file:
+    json.dump(group_data, make_file, ensure_ascii=False, indent="\t")
 # print(group_data)
