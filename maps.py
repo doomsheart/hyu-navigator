@@ -486,10 +486,12 @@ def path_search(source, target):
         elif id in {42, 56, 212}:
             tips.add(9)
 
-    ret = {
-        "path": path,
-        "tips": list(tips)
-    }
+    # ret = {
+    #     "path": path,
+    #     "tips": list(tips)
+    # }
+    
+    ret = [path, list(tips)]
     return ret;
 
 
