@@ -1,2 +1,4 @@
 django
 networkx
+flask
+gunicorn
