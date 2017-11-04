@@ -438,7 +438,7 @@ building_number = {
     '제2법학관': 408,
     '제3법학관': 409,
     '경제금융대학': 4102,
-    '법학학술정보관': 4101,
+    '법학학술정보관': 4101, 
     '백남학술정보관': 501,
     '사회과학관': 504,
     '사범대학 본관': 505,
@@ -457,10 +457,6 @@ building_number = {
     '제1학생생활관': 801,
     '제5학생생활관': 803
 }
-
-
-
-
 
 def path_search(source, target):
     path = nx.dijkstra_path(G, source, target)
