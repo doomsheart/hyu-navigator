@@ -11,30 +11,32 @@ Optimal path search for HYU Seoul Campus.
 ### Prerequisites
 
 #### Install the dependencies
+
+- NetworkX
+
 ```
-$ pip install networkx PyQt4
+$ pip install networkx
 ```
 or
 ```
-$ pip3 install networkx PyQt4
+$ pip3 install networkx
 ```
+
+- PyQt4
+
+Download whl file at https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4
+```
+$ pip install <downloaded file name>.whl
+```
+
+
+
 
 ### Installing
 
 1. Clone this repository or download ZIP.
 ```
-$ git clone https://github.com/machenity/hyu-navigator.git
-```
-
-2. Run gui.py.
-```
-$ cd hyu-navigator
-$ python run.py
-```
-
-If you use both python2 & 3, try this.
-```
-$ python3 run.py
+$ git clone https://github.com/doomsheart/hyu-navigator.git
 ```
 
 
@@ -50,6 +52,8 @@ Please send email to machenity@gmail.com for details on our code of conduct, and
 ## Authors
 
 * **Jeongmin Yu** - *Initial work* - [machenity](https://github.com/machenity)
+* **Junsu Lim** - [junsulime](https://github.com/junsulime)
+* **Joonho Wohn** - [doomsheart](https://github.com/doomsheart)
 
 Special thanks to 김휘찬, 이지원, 심승현, 윤민석, 조한빛.
 
@@ -59,5 +63,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* This was made for 소프트웨어입문설계.
-
+* This was made for 오소리 해커톤.

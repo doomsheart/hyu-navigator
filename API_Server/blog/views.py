@@ -1,4 +1,30 @@
+<<<<<<< HEAD
 from django.http import HttpResponse, JsonResponse
+=======
+<<<<<<< HEAD
+from django.shortcuts import render
+import json
+# Create your views here.
+from django.views.decorators.csrf import csrf_exempt
+from requests import Response
+
+
+@csrf_exempt
+def inputData(request):
+    print(request)
+    if request.method == 'GET':
+        # request_data = ((request.body).decode('utf-8'))
+        # request_data = json.loads(request_data)
+        # content = request['content']
+        print('18')
+        print(request)
+    # print('sdasds')
+    a = "a"
+    # return Response(a)
+    return render(request, 'default_page.html')
+=======
+from django.http import HttpResponse
+>>>>>>> 1ab304ffc4a20b7fcdc0ab543c17ff8d2302dfb0
 from django.shortcuts import render
 import json
 # Create your views here.
@@ -474,6 +500,7 @@ def inputData(request):
         content.append(request.GET.get("start_id"))
         content.append(request.GET.get("end_id"))
         print(content)
+<<<<<<< HEAD
     result = path_search(content[0], content[1])
     print(result)
     return JsonResponse(result)
@@ -511,3 +538,11 @@ def path_search(source, target):
     # print(ret)
 
     return ret;
+=======
+    # print('sdasds')
+    a = "a"
+    # return Response(a)
+    # return render(request, 'default_page.html')
+    return HttpResponse("123123")
+>>>>>>> 6443a48d399c04f52c3140376eb5fca6187c7d39
+>>>>>>> 1ab304ffc4a20b7fcdc0ab543c17ff8d2302dfb0
