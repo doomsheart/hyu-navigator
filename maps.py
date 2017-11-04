@@ -458,8 +458,20 @@ building_number = {
     '제5학생생활관': 803
 }
 
-def path_search(source, target):
-    path = nx.dijkstra_path(G, source, target)
+def path_search(source, target, stopover=None):
+    if stopover == None: stopover = []
+    path = []
+
+    if stopover != [] :
+        for i in range(len(stopover)):
+            if i == 0: 
+                path += nx.dijkstra_path(G, source, stopover[i])
+            else: 
+                path += nx.dijkstra_path(G, stopover[i-1], stopover[i])
+        path += nx.dijkstra_path(G, stopover[len(stopover)-1], target) 
+    else: 
+        path = nx.dijkstra_path(G, source, target)
+
     tips = set()
     for id in path:
         if id in {12, 21, 105}:
@@ -487,4 +499,5 @@ def path_search(source, target):
     }
 
     return ret;
+
 
