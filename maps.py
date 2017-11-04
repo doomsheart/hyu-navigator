@@ -1,5 +1,4 @@
 import networkx as nx
-# import matplotlib.pyplot as plt
 
 G = nx.MultiDiGraph()
 
@@ -490,61 +489,6 @@ def path_search(source, target):
         "path": path,
         "tips": list(tips)
     }
+
     return ret;
 
-
-if __name__=='__main__':
-    pos = nx.spring_layout(G)
-    '''
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[101,102,104,105,107,108,109],
-                           node_color='b',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[201,202,203,204,206,207,208,209,210,211,212],
-                           node_color='y',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[301,304,305,306],
-                           node_color='#ffb6c1',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[401,402,403,405,406,407,408,409,4101,4102],
-                           node_color='#551a8b',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[501,504,505,506,507,508],
-                           node_color='r',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[604,605,606,618],
-                           node_color='#ffa500',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[701,703,705,706,707],
-                           node_color='#98fb98',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=[801,803],
-                           node_color='g',
-                           node_size=80)
-
-    nx.draw_networkx_nodes(G, pos,
-                           nodelist=range(1,76),
-                           node_color='#000000',
-                           node_size=40)
-
-    nx.draw_networkx_edges(G, pos, width=0.6)
-    '''
-    # print(nx.shortest_path(G, 212, 305))
-    print(nx.dijkstra_path(G, 59, 305))
-    print(nx.dijkstra_path_length(G, 59, 305))
-
-    # plt.show()
